@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bliss Point Calculator | Bilanciamento Ricette</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="top-controls">
+        <button id="theme-toggle" class="control-btn" title="Toggle Theme">
+            <i data-lucide="moon"></i>
+        </button>
+        <button id="lang-toggle" class="control-btn" title="Toggle Language">
+            IT
+        </button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 data-t="app-title">Bliss Point Calculator</h1>
+            <p data-t="app-subtitle">Ottimizza il bilanciamento di zuccheri, sali e grassi per il massimo appeal sensoriale.</p>
+        </header>
+
+        <main>
+            <section id="recipe-inputs">
+                <h2 data-t="original-recipe-title"><i data-lucide="utensils"></i> Ricetta Originale</h2>
+                <div id="ingredients">
+                    <div class="ingredient-row ingredient">
+                        <div class="input-group">
+                            <label data-t="label-ingredient">Ingrediente</label>
+                            <input type="text" data-tp="placeholder-ingredient" placeholder="Es. Farina" class="ingredient-name">
+                        </div>
+                        <div class="input-group">
+                            <label data-t="label-quantity">Quantità (g)</label>
+                            <input type="number" placeholder="0" class="ingredient-qty">
+                        </div>
+                        <div class="input-group">
+                            <label data-t="label-sugar">Zucchero (g)</label>
+                            <input type="number" placeholder="0" class="ingredient-sugar">
+                        </div>
+                        <div class="input-group">
+                            <label data-t="label-salt">Sale (g)</label>
+                            <input type="number" placeholder="0" class="ingredient-salt">
+                        </div>
+                        <div class="input-group">
+                            <label data-t="label-fat">Grassi (g)</label>
+                            <input type="number" placeholder="0" class="ingredient-fat">
+                        </div>
+                    </div>
+                </div>
+                <button id="add-ingredient">
+                    <i data-lucide="plus"></i> <span data-t="btn-add-ingredient">Aggiungi Ingrediente</span>
+                </button>
+            </section>
+
+            <section id="bliss-point-inputs">
+                <h2 data-t="bliss-point-title"><i data-lucide="sliders"></i> Bliss Point Desiderato</h2>
+                <div class="bliss-grid">
+                    <div class="input-group">
+                        <label for="sugar-ratio" data-t="label-sugar-ratio">Zucchero (%)</label>
+                        <input type="number" id="sugar-ratio" placeholder="55" value="55">
+                    </div>
+                    <div class="input-group">
+                        <label for="salt-ratio" data-t="label-salt-ratio">Sale (%)</label>
+                        <input type="number" id="salt-ratio" placeholder="15" value="15">
+                    </div>
+                    <div class="input-group">
+                        <label for="fat-ratio" data-t="label-fat-ratio">Grassi (%)</label>
+                        <input type="number" id="fat-ratio" placeholder="30" value="30">
+                    </div>
+                </div>
+            </section>
+
+            <button id="calculate-btn">
+                <i data-lucide="calculator"></i> <span data-t="btn-calculate">Calcola Bliss Point</span>
+            </button>
+
+            <section id="result">
+                <h2 data-t="modified-recipe-title"><i data-lucide="chef-hat"></i> Ricetta Modificata</h2>
+                <div id="new-recipe" data-t="result-placeholder">I risultati appariranno qui dopo il calcolo...</div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
