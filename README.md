@@ -8,9 +8,12 @@ Bliss Point Generator for every recipes with add ingridients in your original re
 
 ## Docker Compose 
 
+```bash
 docker compose up -d
-docker compose ps
- 
+docker compose start
+docker compose stop 
+```
+
 Go to http://localhost:8080
 
 ## Features
