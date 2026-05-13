@@ -6,6 +6,13 @@ Bliss Point Generator for every recipes with add ingridients in your original re
 ## What is Bliss Point?
 ✨The bliss point is the ideal level of sugar, salt, or fat in a food that makes it taste most pleasurable and satisfying, often increasing the desire to keep eating it.
 
+## Docker Compose 
+
+docker compose up -d
+docker compose ps
+ 
+Go to http://localhost:8080
+
 ## Features
 - Language: 🇬🇧 EN - 🇮🇹 IT
 - Theme: 🌙 Dark - ☀️ White
